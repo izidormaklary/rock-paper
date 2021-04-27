@@ -62,7 +62,7 @@ let pchoice = document.getElementById("paper");
 
     function evaluate(){
         eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
-
+        eval(mychoice).style.backgroundColor= "pink";
         // computer generates random number, a value of equal possibilities will be assigned to pchoice
         let x = Math.random();
         if (x <= 0.2){
