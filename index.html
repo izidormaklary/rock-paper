@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> game title </title>
+    <style>
+        th {
+            width: 50%;
+            background-color: #1e2125;
+            color: #95999c;
+        }
+        table {
+            width: 70%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: x-large;
+            margin-bottom: auto ;
+            margin-top: auto;
+            height: 300px;
+        }
+        #pcScore, #pScore{
+            font-size: 300px;
+        }
+        @font-face {
+            font-family:"Pixeboy";
+            src: url("Pixeboy-z8XGD.ttf") format("truetype");
+        }
+        body {
+            font-family: Pixeboy;
+            background-color: #d6d8d9;
+            color: #1e2125;
+            min-height: 100%;
+
+        }
+        h1{
+            font-size: 70px;
+            width: 100%;
+            text-align: center;
+            background-color: #1e2125;
+            color: #95999c;
+        }
+        button  {
+            font-family: inherit;
+            font-size:30px ;
+        }
+        td {
+           width: 20%;
+        }
+        .react {
+            text-align: center;
+            font-size: 60px;
+            vertical-align: center;
+        }
+        .reactwrap{
+
+         
+
+            margin-top: 100px;
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>
+        Let's play a game!
+    </h1>
+<table>
+    <tr>
+        <th>
+            Your score!
+        </th>
+        <th>
+            Computers score!
+        </th>
+    </tr>
+    <tr>
+        <td id="pScore">
+            0
+        </td>
+        <td id="pcScore">
+            0
+        </td>
+    </tr>
+    <table>
+        <tr>
+            <td>
+                <button type="button" class="option" id="paper">
+                paper
+                </button>
+            </td>
+            <td>
+                <button type="button" class="option" id="rock">
+                rock
+                </button>
+            </td>
+            <td>
+                <button type="button" class="option" id="scissor">
+                scissor
+                </button>
+            </td>
+            <td>
+                <button type="button" class="option" id="lizard">
+                lizard
+                </button>
+            </td>
+            <td>
+                <button type="button" class="option" id="spock">
+                spock
+                </button>
+            </td>
+        </tr>
+        <tr>
+           <td colspan="5">
+                <button type="reset" class="reset" id="reset">reset</button>
+           </td>
+        </tr>
+    </table>
+</table>
+<div class="reactwrap">
+    <p class="react" id="reaction">
+        ...
+    </p>
+</div>
+</body>
+</html>
