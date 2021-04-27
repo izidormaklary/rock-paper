@@ -62,6 +62,8 @@ let pchoice = document.getElementById("paper");
 
     function evaluate(){
         eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
+
+        // computer generates random number, a value of equal possibilities will be assigned to pchoice
         let x = Math.random();
         if (x <= 0.2){
             pchoice = "paper";
@@ -79,11 +81,14 @@ let pchoice = document.getElementById("paper");
             pchoice = "spock";
             spock.style.backgroundColor= "yellow";
         }
+//possible outcomes
+
+        //tie
         if( mychoice == pchoice){
             eval(mychoice).style.backgroundColor= "grey";
 
             react.innerHTML = "careful there" ;
-
+        // first looking for winner cases, if none found its a losing case
         }else if(mychoice === "paper" ){
             if (pchoice === "rock" || pchoice === "spock" ){
                 i = parseInt(myscore.innerHTML) + 1 ;
@@ -136,10 +141,7 @@ let pchoice = document.getElementById("paper");
             }
 
         }
-      //  setTimeout(function (){
-      ////     eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
 
-       // }, 1000);
 
     };
 
