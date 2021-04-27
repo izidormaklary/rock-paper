@@ -1,47 +1,67 @@
 (function() {
-
-let mychoice;
+//variables, constraints
+let mychoice = document.getElementById("paper");
 let i;
 let pi;
+let pchoice = document.getElementById("paper");
+    const alloptions = document.getElementsByClassName("option");
+
+
+    // option buttons
     const paper = document.getElementById("paper");
     const rock = document.getElementById("rock");
     const scissor = document.getElementById("scissor");
     const lizard = document.getElementById("lizard");
     const spock = document.getElementById("spock");
+    // message section
     const react = document.getElementById("reaction");
-
+    // score display
     const myscore = document.getElementById("pScore");
     const pcscore = document.getElementById("pcScore");
 
+
+ // button actions, highlight and
     paper.addEventListener("click", ev => {
+        eval(mychoice).style.backgroundColor= "rgb(245,245,245)";
+        eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
         mychoice = "paper";
+
         paper.style.backgroundColor= "pink";
-        evaluate();
+
     });
     rock.addEventListener("click", ev =>{
+        eval(mychoice).style.backgroundColor= "rgb(245,245,245)";
         mychoice = "rock";
         rock.style.backgroundColor= "pink";
-        evaluate();
+
     });
     scissor.addEventListener("click", ev =>{
+        eval(mychoice).style.backgroundColor= "rgb(245,245,245)";
+        eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
         mychoice = "scissor";
         scissor.style.backgroundColor= "pink";
-        evaluate();
+
     });
     lizard.addEventListener("click", ev =>{
+        eval(mychoice).style.backgroundColor= "rgb(245,245,245)";
+        eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
         mychoice = "lizard";
-        eval(mychoice).style.backgroundColor= "pink";
-        evaluate();
+        lizard.style.backgroundColor= "pink";
+
     });
     spock.addEventListener("click", ev => {
+        eval(mychoice).style.backgroundColor= "rgb(245,245,245)";
+        eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
         mychoice = "spock";
         spock.style.backgroundColor= "pink";
-        evaluate();
+
 
     });
+    document.getElementById("play").addEventListener("click", ev => evaluate())
+    document.getElementById("reset").addEventListener("click", ev => location.reload())
 
     function evaluate(){
-        let pchoice;
+        eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
         let x = Math.random();
         if (x <= 0.2){
             pchoice = "paper";
@@ -114,12 +134,12 @@ let pi;
                 pi = parseInt(pcscore.innerHTML) + 1 ;
                 pcscore.innerHTML = pi ;
             }
-        }
-        setTimeout(function (){
-            eval(mychoice).style.backgroundColor= "rgb(245,245,245)";
-            eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
 
-        }, 1000);
+        }
+      //  setTimeout(function (){
+      ////     eval(pchoice).style.backgroundColor= "rgb(245,245,245)";
+
+       // }, 1000);
 
     };
 
