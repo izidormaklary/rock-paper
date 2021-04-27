@@ -1,7 +1,8 @@
 th {
     width: 50%;
     background-color: #1e2125;
-    color: #95999c;
+    color: #fafafa;
+    font-size: 40px ;
 }
 table {
     width: 70%;
@@ -32,11 +33,13 @@ h1{
     width: 100%;
     text-align: center;
     background-color: #1e2125;
-    color: #95999c;
+    color: #c0c5c6;
 }
 button  {
     font-family: inherit;
-    font-size:30px ;
+    font-size:40px ;
+    width: 100%;
+
 }
 td {
     width: 20%;
@@ -50,7 +53,7 @@ td {
 
 
 
-    margin-top: 100px;
+    margin-top: 50px;
 
 
 }
